@@ -1,0 +1,63 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+}
+
+nav {
+  height: 100vh;
+  background-color: rgb(43, 43, 63);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+nav .logo,
+nav .control-container {
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.dashboard {
+  padding: 20px;
+  width: 100%;
+}
+
+.dashboard .ticket-container {
+  height: 80vh;
+  overflow: scroll;
+}
+
+.ticket-card {
+  display: flex;
+  width: 100%;
+}
+
+
+.ticket-card #link {
+  display: flex;
+  width: 100%;
+}
+
+.ticket-card #link>* {
+  background-color: rgb(221, 221, 221);
+  margin: 2px;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
