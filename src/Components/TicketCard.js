@@ -9,13 +9,14 @@ import PriorityDisplay from './PriorityDispaly';
 export default function TicketCard({ ticket, color }) {
     return (
         <div className='ticket-card'>
+            <div className='ticket-color' style={{ backgroundColor: color }} />
             <Link to={`/ticket/${ticket.documentId}`} id='link'>
-                <div className='ticket-color' />
+
                 <h3>{ticket.title}</h3>
-                <AvatarDisplay />
-                <StatusDisplay />
-                <PriorityDisplay />
-                <ProgressBar />
+                <AvatarDisplay ticket={ticket} />
+                <StatusDisplay status={ticket.status} />
+                <PriorityDisplay priority={ticket.priority} />
+                <ProgressBar progress={ticket.progress} />
             </Link>
             <DeleteBlock />
         </div>
